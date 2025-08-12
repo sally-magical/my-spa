@@ -13,7 +13,7 @@ function App() {
         onClick={() => setCount(count + 1)}
         style={{
           background: '#646cff',
-          color: '#fff',
+          color: 'red', // ここを変更
           padding: '0.5rem 1rem',
           fontSize: '1rem',
           border: 'none',
