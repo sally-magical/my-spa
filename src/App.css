@@ -40,3 +40,87 @@
 .read-the-docs {
   color: #888;
 }
+
+/* --- 追加・変更分のみ --- */
+
+/* レスポンシブカードレイアウト */
+.app-card {
+  background: var(--card-bg, rgba(255,255,255,0.04));
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 480px;
+  transition: box-shadow 0.2s;
+}
+@media (max-width: 600px) {
+  .app-card {
+    padding: 1rem 0.5rem;
+    max-width: 98vw;
+  }
+}
+@media (min-width: 900px) {
+  .app-card {
+    max-width: 640px;
+    padding: 3rem 2.5rem;
+  }
+}
+
+/* タイトル・本文余白・行間 */
+.app-title {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.15;
+}
+.app-desc {
+  margin-bottom: 2em;
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+/* ボタンのモダン演出 */
+.app-btn {
+  background: linear-gradient(90deg, #ff6a6a 0%, #ffb86c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.4em;
+  font-size: 1.1em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+}
+.app-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px 0 rgba(255,106,106,0.15);
+  background: linear-gradient(90deg, #ffb86c 0%, #ff6a6a 100%);
+}
+
+/* ダーク/ライト対応 */
+@media (prefers-color-scheme: light) {
+  .app-card {
+    --card-bg: #fff;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06);
+  }
+  .app-btn {
+    background: linear-gradient(90deg, #ff6a6a 0%, #ffb86c 100%);
+    color: #fff;
+  }
+  .app-btn:hover {
+    background: linear-gradient(90deg, #ffb86c 0%, #ff6a6a 100%);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .app-card {
+    --card-bg: #23272f;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  }
+}
+
+/* 余白調整 */
+.weather-widget,
+.weather-history {
+  margin-top: 2rem;
+}
+
+/* --- ここまで --- */
